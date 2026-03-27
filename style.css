@@ -133,3 +133,23 @@ a.mainHeading:hover {
 .jiggle {
     animation: jiggle 0.4s ease;
 }
+
+.content-projects{
+    flex: 1;
+}
+
+.boxes {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+}
+
+.box {
+    flex: 1;
+    background: #111;
+    border: 1px solid #222;
+    padding: 2rem;
+    width: 10vh;
+}
