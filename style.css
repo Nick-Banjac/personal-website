@@ -154,6 +154,7 @@ a.mainHeading:hover {
     padding: 2rem;
     width: 50vh;
     height: 70vh;
+    border-radius: 5px;
 }
 
 .dot {
@@ -196,6 +197,7 @@ a.mainHeading:hover {
     width: 400px;
     height: 300px;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 .carousel-btn {
@@ -205,6 +207,7 @@ a.mainHeading:hover {
     font-size: 2rem;
     cursor: pointer;
     padding: 0.5rem 1rem;
+    border-radius: 5px;
 }
 
 .carousel-btn:hover {
