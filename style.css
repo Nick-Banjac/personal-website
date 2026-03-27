@@ -149,7 +149,7 @@ a.mainHeading:hover {
 .box {
     flex: 1;
     flex-direction: column;
-    background: black;
+    background: #232423;
     border: 1px solid white;
     padding: 2rem;
     width: 50vh;
@@ -179,40 +179,10 @@ a.mainHeading:hover {
     width: 100%;
     border-bottom: white 1px solid;
     font-size: 1.2rem;
-    cursor: pointer;
 }
 
 .projText{
     margin-bottom: 2vh;
-}
-
-.carousel {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 7rem;
-}
-
-.carousel-img {
-    width: 400px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.carousel-btn {
-    background: none;
-    border: 1px solid white;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-}
-
-.carousel-btn:hover {
-    background: white;
-    color: black;
 }
 
 .proj-container{
@@ -228,27 +198,7 @@ a.mainHeading:hover {
     position: relative;
 }
 
-.modal {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.85);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.proj-body{
     text-align: center;
-    padding: 2rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
 }
 
-.box-header:hover ~ .modal {
-    opacity: 1;
-    pointer-events: all;
-}
-
-.modal:hover {
-    opacity: 1;
-    pointer-events: all;
-}
