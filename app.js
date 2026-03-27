@@ -6,7 +6,7 @@ fetch('/footer.html').then(r => r.text()).then(html => {
     document.getElementById('footer').innerHTML = html;
 });
 
-if (document.querySelector('.mainHeading')) {
+if (document.querySelector('.mainHeading .line')) {
     document.querySelectorAll('.mainHeading .line').forEach(line => {
         const words = line.textContent.trim().split(' ');
 
@@ -20,24 +20,13 @@ if (document.querySelector('.mainHeading')) {
             return `<span class="word">${chars}</span>`;
         }).join(' ');
 
-        line.querySelectorAll('.word').forEach(word => {
-            word.addEventListener('mouseenter', () => {
-                word.querySelectorAll('.char').forEach(char => {
-                    const dist = parseFloat(char.dataset.dist);
-                    char.style.transform = `translateX(${dist * 8}px) scale(1.2)`;
-                    char.style.opacity = '0.3';
-                    char.style.textShadow = '0 0 12px rgba(255,255,255,0.9), 0 0 30px rgba(255,255,255,0.5)';
-                });
-            });
-
-            word.addEventListener('mouseleave', () => {
-                word.querySelectorAll('.char').forEach(char => {
-                    char.style.transform = '';
-                    char.style.opacity = '';
-                    char.style.textShadow = '';
-                });
+        line.querySelectorAll('.char').forEach(char => {
+            char.addEventListener('click', () => {
+                char.classList.add('jiggle');
+                char.addEventListener('animationend', () => {
+                    char.classList.remove('jiggle');
+                }, { once: true });
             });
         });
     });
 }
-
