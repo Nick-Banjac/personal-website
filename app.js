@@ -30,3 +30,17 @@ if (document.querySelector('.mainHeading .line')) {
         });
     });
 }
+
+const images = ['main-one.png', 'main-two.png', 'main-three.png'];
+let current = 0;
+const img = document.querySelector('.carousel-img');
+
+document.querySelector('.next').addEventListener('click', () => {
+    current = (current + 1) % images.length;
+    img.src = images[current];
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+    current = (current - 1 + images.length) % images.length;
+    img.src = images[current];
+});

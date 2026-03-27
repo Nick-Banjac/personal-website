@@ -134,24 +134,26 @@ a.mainHeading:hover {
     animation: jiggle 0.4s ease;
 }
 
-.content-projects{
+.content-projects {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .boxes {
     display: flex;
-    gap: 1rem;
-    align-items: center;
-    min-height: 100vh;
-    color: white;
+    gap: 10rem;
 }
 
 .box {
     flex: 1;
-    background: #111;
-    border: 1px solid #222;
+    flex-direction: column;
+    background: black;
+    border: 1px solid white;
     padding: 2rem;
-    width: 10vh;
+    width: 50vh;
+    height: 70vh;
 }
 
 .dot {
@@ -167,4 +169,83 @@ a.mainHeading:hover {
 .heading-row {
     display: flex;
     align-items: baseline;
+}
+
+.box-header{
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-bottom: white 1px solid;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.projText{
+    margin-bottom: 2vh;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 7rem;
+}
+
+.carousel-img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.carousel-btn {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
+.carousel-btn:hover {
+    background: white;
+    color: black;
+}
+
+.proj-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    vertical-align: center;
+    height: 100%;
+}
+
+.box {
+    position: relative;
+}
+
+.modal {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.box-header:hover ~ .modal {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal:hover {
+    opacity: 1;
+    pointer-events: all;
 }
