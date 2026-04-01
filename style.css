@@ -93,21 +93,19 @@ footer {
     opacity: 0.7;
 }
 
-.icon{
-    height:5vh;
-    width:5vh;
+.icon {
+    height: 5vh;
+    width: 5vh;
     margin-top: 1vh;
     margin-left: 0.3vw;
 }
-
-
 
 .char {
     cursor: pointer;
     display: inline-block;
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-                opacity 0.4s ease,
-                text-shadow 0.4s ease;
+    opacity 0.4s ease,
+    text-shadow 0.4s ease;
 }
 
 .line {
@@ -179,7 +177,7 @@ a.mainHeading:hover {
     align-items: baseline;
 }
 
-.box-header{
+.box-header {
     color: white;
     display: flex;
     justify-content: center;
@@ -188,11 +186,11 @@ a.mainHeading:hover {
     font-size: 1.2rem;
 }
 
-.projText{
+.projText {
     margin-bottom: 2vh;
 }
 
-.proj-container{
+.proj-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -205,28 +203,74 @@ a.mainHeading:hover {
     position: relative;
 }
 
-.proj-body{
+.proj-body {
     text-align: center;
 }
 
+/* ── Resume ── */
 
-
-.resumeContainer{
+.resumeContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    padding: 4vh 2vw;
+    box-sizing: border-box;
 }
 
-.resumeBox{
+.resumeBox {
     color: white;
-    width: 50vh;
-    height: 70vh;
+    width: min(90vw, 700px);
+    max-height: 85vh;
+    overflow-y: auto;
     border: white 1px solid;
-    font-size: 0.6rem;
+    font-size: clamp(0.7rem, 1.5vw, 1rem);
     text-align: left;
-    padding-left: 2rem;
-    padding-top: 3rem;
+    padding: clamp(1rem, 3vw, 2.5rem);
+    box-sizing: border-box;
 }
 
+.resumeBox h2 {
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+    margin-top: 1.2em;
+    margin-bottom: 0.4em;
+}
+
+.resumeBox h3 {
+    font-size: clamp(0.75rem, 1.6vw, 1rem);
+    font-weight: 600;
+    margin-top: 0.8em;
+    margin-bottom: 0.3em;
+}
+
+.resumeBox h3 span {
+    font-weight: 300;
+    opacity: 0.7;
+}
+
+.resumeBox ul {
+    margin: 0.3em 0 0.6em 1.2em;
+    padding: 0;
+}
+
+.resumeBox li {
+    margin-bottom: 0.25em;
+}
+
+/* Scrollbar styling to match the dark theme */
+.resumeBox::-webkit-scrollbar {
+    width: 4px;
+}
+
+.resumeBox::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.resumeBox::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+.resumeBox::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
