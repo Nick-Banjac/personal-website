@@ -272,6 +272,15 @@ a.mainHeading:hover {
     line-height: 1.5;
 }
 
+.content-email {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 2vh 2vw;
+    padding-bottom: 20vh;
+}
+
 .resumeBox::-webkit-scrollbar { width: 4px; }
 .resumeBox::-webkit-scrollbar-track { background: transparent; }
 .resumeBox::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.3); border-radius: 2px; }
@@ -312,4 +321,5 @@ a.mainHeading:hover {
         padding: 2vh 3vw;
         align-items: flex-start;
     }
+
 }
