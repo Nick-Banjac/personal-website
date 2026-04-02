@@ -1,3 +1,9 @@
+const favicon = document.createElement('link');
+favicon.rel = 'icon';
+favicon.type = 'image/ico';
+favicon.href = '/icon.ico';
+document.head.appendChild(favicon);
+
 fetch('/header.html').then(r => r.text()).then(html => {
     document.getElementById('header').innerHTML = html;
 });
