@@ -49,5 +49,6 @@ personal-website/
 ├── style.css
 ├── app.js
 ├── server.js
+├── icon.ico
 └── linkedinIcon.png
 ```
