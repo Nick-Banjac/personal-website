@@ -31,19 +31,4 @@ if (document.querySelector('.mainHeading .line')) {
     });
 }
 
-// Only run carousel if it exists on this page
-const img = document.querySelector('.carousel-img');
-if (img) {
-    const images = ['main-one.png', 'main-two.png', 'main-three.png'];
-    let current = 0;
 
-    document.querySelector('.next').addEventListener('click', () => {
-        current = (current + 1) % images.length;
-        img.src = images[current];
-    });
-
-    document.querySelector('.prev').addEventListener('click', () => {
-        current = (current - 1 + images.length) % images.length;
-        img.src = images[current];
-    });
-}
