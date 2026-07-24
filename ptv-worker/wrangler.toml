@@ -1,0 +1,7 @@
+name = "ptv-proxy"
+main = "src/worker.js"
+compatibility_date = "2024-11-01"
+
+# API_ID and API_KEY are set as secrets, not here:
+#   wrangler secret put API_ID
+#   wrangler secret put API_KEY

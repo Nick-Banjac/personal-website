@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>·</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="trains.css" />
+</head>
+<body>
+<div id="header"></div>
+<div class="content trains-content">
+    <div class="boards">
+        <section class="board" data-board="alamein">
+            <div class="board__head">
+                <h1>Alamein → City</h1>
+                <button class="btn--sm" type="button" data-refresh>Refresh</button>
+            </div>
+            <p class="board__status" data-status>Loading…</p>
+            <ol class="departures" data-list aria-live="polite"></ol>
+        </section>
+
+        <section class="board" data-board="camberwell">
+            <div class="board__head">
+                <h1>Camberwell → Alamein</h1>
+                <button class="btn--sm" type="button" data-refresh>Refresh</button>
+            </div>
+            <p class="board__status" data-status>Loading…</p>
+            <ol class="departures" data-list aria-live="polite"></ol>
+        </section>
+
+        <section class="board" data-board="mc-to-alamein">
+            <div class="board__head">
+                <h1>Melb Central → Alamein</h1>
+                <button class="btn--sm" type="button" data-refresh>Refresh</button>
+            </div>
+            <p class="board__status" data-status>Loading…</p>
+            <ol class="departures" data-list aria-live="polite"></ol>
+        </section>
+
+        <section class="board" data-board="alamein-to-mc">
+            <div class="board__head">
+                <h1>Alamein → Melb Central</h1>
+                <button class="btn--sm" type="button" data-refresh>Refresh</button>
+            </div>
+            <p class="board__status" data-status>Loading…</p>
+            <ol class="departures" data-list aria-live="polite"></ol>
+        </section>
+    </div>
+    <p class="board__note">Live PTV data · updates every 30 seconds.</p>
+</div>
+<div id="footer"></div>
+<script src="app.js"></script>
+<script src="trains.js"></script>
+</body>
+</html>

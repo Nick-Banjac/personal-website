@@ -1,0 +1,177 @@
+/* Train board — matches the site's black/white theme. */
+
+.trains-content {
+    padding: 3vh 4vw 10vh;
+}
+
+.boards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+}
+
+.board {
+    background: black;
+    color: #f2f2f2;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 1.25rem;
+}
+
+.board__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    min-height: 3rem;
+}
+
+.board__head h1 {
+    margin: 0;
+    font-family: "Syne", sans-serif;
+    font-weight: 400;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    letter-spacing: -0.02em;
+    opacity: 0.9;
+}
+
+.btn--sm {
+    flex-shrink: 0;
+    background: transparent;
+    color: #f2f2f2;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    padding: 0.35rem 0.8rem;
+    font-family: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.btn--sm:hover {
+    opacity: 1;
+}
+
+.board__status {
+    margin: 0;
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
+
+.board__note {
+    margin: 1.5rem 0 0;
+    text-align: center;
+    color: #f2f2f2;
+    opacity: 0.5;
+    font-size: 0.85rem;
+}
+
+.departures {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.departure {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: 3px solid rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+    padding: 0.85rem 1rem;
+}
+
+.departure--next {
+    border-color: white;
+}
+
+.departure__main {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.departure__time {
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+.departure__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 0;
+}
+
+.departure__dir {
+    opacity: 0.75;
+    font-size: 0.9rem;
+}
+
+.departure__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+
+.departure__tag {
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.12rem 0.5rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    opacity: 0.85;
+}
+
+.departure__tag.is-live {
+    border-color: #3ddc84;
+    color: #3ddc84;
+    opacity: 1;
+}
+
+.departure__tag.is-sched {
+    opacity: 0.55;
+}
+
+.departure__tag.is-direct {
+    border-color: #5aa9ff;
+    color: #5aa9ff;
+    opacity: 1;
+}
+
+.departure__tag.is-change {
+    border-color: #ffcc4d;
+    color: #ffcc4d;
+    opacity: 1;
+}
+
+.departure__away {
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0.9;
+}
+
+.departure__connect {
+    display: block;
+    margin-top: 0.55rem;
+    padding-top: 0.55rem;
+    border-top: 1px dashed rgba(255, 255, 255, 0.2);
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+    .trains-content {
+        padding: 2vh 1rem 8vh;
+    }
+
+    .board__head {
+        min-height: 0;
+    }
+}
